@@ -1,5 +1,5 @@
 const Category = require('../models/Category')
-const Position = require('../modles/Position')
+const Position = require('../models/Position')
 const errorHandler = require('../utils/errorHandlers')
 
 

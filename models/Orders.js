@@ -19,7 +19,7 @@ const orderSchema = new Schema({
                 type: Number
             },
             cost: {
-                type: Nuber
+                type: Number
             }
         }
     ],

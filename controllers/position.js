@@ -1,5 +1,5 @@
 const Position = require('../models/Position')
-const errorHandlers = require('../utils/errorHandler')
+const errorHandlers = require('../utils/errorHandlers')
 
 
 module.exports.getByCategoryId = async function(req, res) {
@@ -14,7 +14,7 @@ module.exports.getByCategoryId = async function(req, res) {
     }
 }
 
-module.exports.create = function(req, res) {
+module.exports.create = async function(req, res) {
     try {
         const position = await new Position({
             name: req.body.name,
@@ -28,7 +28,7 @@ module.exports.create = function(req, res) {
     }
 }
 
-module.exports.remove = function(req, res) {
+module.exports.remove = async function(req, res) {
     try {
         await Position.remove({_id: req.params.id})
         res.status(200).json({
@@ -39,7 +39,7 @@ module.exports.remove = function(req, res) {
     }
 }
 
-module.exports.update = function(req, res) {
+module.exports.update = async function(req, res) {
     try {
         const position = await Position.findOneAndUpdate(
             {_id: req.params.id},

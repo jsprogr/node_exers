@@ -1,4 +1,4 @@
-const Order = require('../models/Order')
+const Order = require('../models/Orders')
 const errorHandler = require('../utils/errorHandlers')
 
 
